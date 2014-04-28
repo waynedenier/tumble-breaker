@@ -3,7 +3,36 @@ tumble-breaker
 
 Javascript brute force search for answer to Fog Creek Software Engineering puzzle.
 
-Results
+Purpose
+=======
+
+To discover a combination of 9 characters that when hashed with a specific algorithm would output 910897038977002.
+
+Dependencies
+============
+
+Node.js
+
+Summary
+=======
+
+The application is built to systematicly sweep through all possible combinations till it finds the right one.
+There are a LOT of possible combinations, ~68.7 billion in fact. That being said, if the application could
+find the right one within 24 hours it would be considered a success.
+
+
+The first goal was to build a module that could advance through combinations. This module had to consume as little
+memory as possible as it could be running for quite a long time. The second goal was to run through as many
+combinations as fast as possible. The result was a loop that could pull and test ~1,000,000/per second. Spread out
+over 3 running instances scanning equal parts of the combination range generated the correct answer overnight.
+
+
+For long-term production use, the rough tests written here would be moved to a framework such as jasmine where
+they could be run as part of the application build. Additional tests would be required around the hash function
+as well.
+
+
+Additional Notes and Revision History from Trials
 =======
 
 [First Run]
