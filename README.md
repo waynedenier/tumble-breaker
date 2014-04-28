@@ -69,3 +69,13 @@ Started ~8:10PM - Ended 8:30PM.
 [Sixth Run]
 
 Take out Date.now call to see how it affects performance.
+
+Not much faster, may just let it run as performance improvements are tapering off.
+
+Started 8:35PM - End 11:54PM.
+
+at 9:45PM - 2,404,000,000 combinations. [ungopursa]
+
+[Seventh Run]
+
+Fresh sample.

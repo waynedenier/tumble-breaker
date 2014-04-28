@@ -6,7 +6,7 @@ String.prototype.replaceAt=function(index, character) {
 var letters = "acdegilmnoprstuw";
 var numberOfLetters = letters.length;
 var expectedLength = 9;
-var expectedOutput = "910897038977002";
+var expectedOutput = 910897038977002;
 
 var hash = function() {
 	// locals
@@ -85,23 +85,25 @@ var tumbler = function () {
 
 // Run utility
 
-var answer = "unlnnptaa";
+var answer = "aaaaaaaaa";
+//var answer = "aaaaaaaai";
+//var answer = "aaaaaaaap";
 var notFound = true;
 var output = "";
 var tmblr = tumbler();
 var hsh = hash();
 var triesThisRun = 0;
 
-while(notFound) {
-    triesThisRun++;
-	answer = tmblr.next(answer);
-    output = hsh.get(answer);
-    if(triesThisRun % 1000000 == 0){
-		console.log("Trial " + triesThisRun + " [" + answer + "] > " + output + " (" + Date.now() + ")");
-	}
-    if(output == expectedOutput || answer == "aaaaaaaaa"){
-        notFound = false;
-    }
-}
+//while(notFound) {
+//    triesThisRun++;
+//	answer = tmblr.next(answer);
+//    output = hsh.get(answer);
+//    if(triesThisRun % 1000000 == 0){
+//		console.log("Trial " + triesThisRun + " [" + answer + "] > " + output);
+//	}
+//    if(output == expectedOutput || answer == "aaaaaaaaa"){
+//        notFound = false;
+//    }
+//}
 
 console.log("string found! [" + answer + "]");
