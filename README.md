@@ -78,4 +78,10 @@ at 9:45PM - 2,404,000,000 combinations. [ungopursa]
 
 [Seventh Run]
 
-Fresh sample.
+Fresh sample. 
+
+Started ~11:57PM - Checked 8:33AM.
+
+Answer found!
+
+Divided search up in to 3 running processes. First searched starting at "aaaaaaaaa", second at "aaaaaaaai" and third started at "aaaaaaaap".

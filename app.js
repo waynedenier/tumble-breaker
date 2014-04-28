@@ -85,25 +85,25 @@ var tumbler = function () {
 
 // Run utility
 
-var answer = "aaaaaaaaa";
+//var answer = "aaaaaaaaa";
 //var answer = "aaaaaaaai";
-//var answer = "aaaaaaaap";
+var answer = "aaaaaaaap";
 var notFound = true;
 var output = "";
 var tmblr = tumbler();
 var hsh = hash();
 var triesThisRun = 0;
 
-//while(notFound) {
-//    triesThisRun++;
-//	answer = tmblr.next(answer);
-//    output = hsh.get(answer);
-//    if(triesThisRun % 1000000 == 0){
-//		console.log("Trial " + triesThisRun + " [" + answer + "] > " + output);
-//	}
-//    if(output == expectedOutput || answer == "aaaaaaaaa"){
-//        notFound = false;
-//    }
-//}
+while(notFound) {
+    triesThisRun++;
+	answer = tmblr.next(answer);
+    output = hsh.get(answer);
+    if(triesThisRun % 1000000 == 0){
+		console.log("Trial " + triesThisRun + " [" + answer + "] > " + output);
+	}
+    if(output == expectedOutput || answer == "aaaaaaaaa"){
+        notFound = false;
+    }
+}
 
 console.log("string found! [" + answer + "]");
