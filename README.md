@@ -30,3 +30,15 @@ Would take 60 days to Break!!!
 
 After a few minutes, would stop continuous string of trys and started pausing after a burst of ~5-10 tries.
 
+[Third Run]
+
+Last attempted string = uulpcmaaa
+
+Globalized more variables. Avoid instantiating modules multiple times in a loop.
+
+Rate closer to 18,724 per second.
+
+Still occasional pausing, but going to allow to run for extended time.
+
+Starting ~7:50PM.
+
