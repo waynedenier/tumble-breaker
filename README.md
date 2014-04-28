@@ -5,8 +5,28 @@ Javascript brute force search for answer to Fog Creek Software Engineering puzzl
 
 Results
 =======
+
+[First Run]
+
 Last attempted string = awlmaeaaa
+
 Ended after 3,145,728 trials before allocation error.
+
    FATAL ERROR: CALL_AND_RETRY_2 Allocation failed - process out of memory
+   
 Range 68,719,476,736.
-Previous run only covers 0.0046% of cases.
+
+First run only covers 0.0046% of cases.
+
+[Second Run]
+
+Pulled some local instance variables out of the while loop and tried again.
+
+Last attempted string = cadialaaa
+
+Starting rate of 13,107 per second.
+
+Would take 60 days to Break!!!
+
+After a few minutes, would stop continuous string of trys and started pausing after a burst of ~5-10 tries.
+

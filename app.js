@@ -2,10 +2,17 @@ String.prototype.replaceAt=function(index, character) {
     return this.substr(0, index) + character + this.substr(index+character.length);
 }
 
+// globals
 var letters = "acdegilmnoprstuw";
 var numberOfLetters = letters.length;
 var expectedLength = 9;
 var expectedOutput = "910897038977002";
+
+// tumbler vars
+var returnValue = "";
+var letter = '';
+var listPosition = 0;
+var isLastLetter = false;
 
 var hash = function(s) {
     var h = 7;
@@ -21,10 +28,10 @@ var tumbler = function () {
     var tumble = function(str, pos){
         if(pos == expectedLength) return str;
 
-        var returnValue = str;
-        var letter = str[pos];
-        var listPosition = letters.indexOf(letter);
-        var isLastLetter = (listPosition == numberOfLetters - 1);
+        returnValue = str;
+        letter = str[pos];
+        listPosition = letters.indexOf(letter);
+        isLastLetter = (listPosition == numberOfLetters - 1);
 
         if (isLastLetter) {
             returnValue = returnValue.replaceAt(pos, letters[0]);
@@ -56,7 +63,7 @@ console.log("Test tumble: (in) " + test1 + " > (out) " + testOutput1);
 var test2 = "waaaaaaaa"
 var testOutput2 = tumbler().next(test2);
 
-console.log("Test tumble: (in) " + test1 + " > (out) " + testOutput2);
+console.log("Test tumble: (in) " + test2 + " > (out) " + testOutput2);
 
 var test3 = "wwwwwwwaa"
 var testOutput3 = tumbler().next(test3);
@@ -72,13 +79,14 @@ console.log("Hashing the default " + test1 + " returns " + hash(test1));
 
 // Run utility
 
-var answer = "aaaaaaaaa";
+var answer = "awlmaeaaa";
 var notFound = true;
+var output = "";
 while(notFound) {
     answer = tumbler().next(answer);
-    var output = hash(answer);
+    output = hash(answer);
     console.log("[" + answer + "] > " + output);
-    if(output == expectedOutput){
+    if(output == expectedOutput || answer == "aaaaaaaaa"){
         notFound = false;
     }
 }
