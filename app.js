@@ -85,7 +85,7 @@ var tumbler = function () {
 
 // Run utility
 
-var answer = "uulpcmaaa";
+var answer = "unlnnptaa";
 var notFound = true;
 var output = "";
 var tmblr = tumbler();
@@ -96,7 +96,7 @@ while(notFound) {
     triesThisRun++;
 	answer = tmblr.next(answer);
     output = hsh.get(answer);
-    if(triesThisRun % 100000 == 0){
+    if(triesThisRun % 1000000 == 0){
 		console.log("Trial " + triesThisRun + " [" + answer + "] > " + output + " (" + Date.now() + ")");
 	}
     if(output == expectedOutput || answer == "aaaaaaaaa"){

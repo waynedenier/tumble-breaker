@@ -20,9 +20,9 @@ First run only covers 0.0046% of cases.
 
 [Second Run]
 
-Pulled some local instance variables out of the while loop and tried again.
-
 Last attempted string = cadialaaa
+
+Pulled some local instance variables out of the while loop and tried again.
 
 Starting rate of 13,107 per second.
 
@@ -56,3 +56,16 @@ Could be done in as soon as 18 HOURS!
 
 Started ~8PM - Ended 8:05. 5 minutes.
 
+[Fifth Run]
+
+Last attempted string: usnnumrea
+
+Lets try only logging every 1,000,000.
+
+Only logs once a second or so. Trying for long term test.
+
+Started ~8:10PM - Ended 8:30PM.
+
+[Sixth Run]
+
+Take out Date.now call to see how it affects performance.
