@@ -85,16 +85,20 @@ var tumbler = function () {
 
 // Run utility
 
-var answer = "awlmaeaaa";
+var answer = "uulpcmaaa";
 var notFound = true;
 var output = "";
 var tmblr = tumbler();
 var hsh = hash();
+var triesThisRun = 0;
 
 while(notFound) {
-    answer = tmblr.next(answer);
+    triesThisRun++;
+	answer = tmblr.next(answer);
     output = hsh.get(answer);
-    console.log("[" + answer + "] > " + output + " (" + Date.now() + ")");
+    if(triesThisRun % 100000 == 0){
+		console.log("Trial " + triesThisRun + " [" + answer + "] > " + output + " (" + Date.now() + ")");
+	}
     if(output == expectedOutput || answer == "aaaaaaaaa"){
         notFound = false;
     }
